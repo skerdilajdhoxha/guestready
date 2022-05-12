@@ -4,9 +4,9 @@ from .models import Reservation
 
 
 def previous_reservations(request):
-    all_reservations = Reservation.objects.all()
+    all_reservations = Reservation.objects.all().select_related("rental")
     return render(
         request,
-        "previous_reservations.html",
+        "reservations.html",
         context={"reservations": all_reservations},
     )

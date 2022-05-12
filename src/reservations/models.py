@@ -25,5 +25,4 @@ class Reservation(models.Model):
             .filter(rental=self.rental)
             .first()
         )
-        if previous:
-            return previous
+        return previous
