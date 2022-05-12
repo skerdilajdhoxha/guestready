@@ -5,9 +5,19 @@
     <title>Precious Reservtions</title>
 </head>
 <body>
-<h1>Previous Reservations</h1>
+<h1>Reservations</h1>
 {% for reservation in reservations %}
-{{ reservation.id }} - {{ reservation.rental }}<br>
+
+Reservation id: {{ reservation.id }},
+Rental name: {{ reservation.rental }},
+Checkin: {{ reservation.checkin }},
+Checkout: {{ reservation.checkout }},
+
+{% if reservation.previous_reservation %}
+Previous reservation: {{ reservation.previous_reservation }}
+{% endif %}
+<br>
+
 {% endfor %}
 </body>
 </html>
