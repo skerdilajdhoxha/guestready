@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Precious Reservtions</title>
+</head>
+<body>
+<h1>Previous Reservations</h1>
+{% for reservation in reservations %}
+{{ reservation.id }} - {{ reservation.rental }}<br>
+{% endfor %}
+</body>
+</html>
