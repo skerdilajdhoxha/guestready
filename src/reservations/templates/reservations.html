@@ -13,9 +13,7 @@ Rental name: {{ reservation.rental }},
 Checkin: {{ reservation.checkin }},
 Checkout: {{ reservation.checkout }},
 
-{% if reservation.previous_reservation %}
 Previous reservation: {{ reservation.previous_reservation }}
-{% endif %}
 <br>
 
 {% endfor %}
